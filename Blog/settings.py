@@ -115,11 +115,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-import os
+import os  # Если еще не импортировано
 
-STATIC_URL = '/static/'  # URL для доступа к статике
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Папка для собранных файлов
+# ... (другие настройки) ...
 
-
+STATIC_URL = '/static/'
+# Указывает, куда Django будет собирать статику при collectstatic
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
