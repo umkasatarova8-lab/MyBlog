@@ -117,11 +117,9 @@ USE_TZ = True
 
 import os
 
-# Путь, куда collectstatic будет складывать файлы
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+STATIC_URL = '/static/'  # URL для доступа к статике
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Папка для собранных файлов
 
-# Путь для статических файлов, используемых в проекте
-STATIC_URL = '/static/'
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
